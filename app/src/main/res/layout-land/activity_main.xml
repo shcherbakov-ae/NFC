@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.nfc_tpi.Activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/bSendFirmare"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_x="0px"
+                android:layout_y="0px"
+                android:scrollbars="vertical">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/bSendParams"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Данные отсутствуют..."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bSendFirmare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onMyClick"
+                android:text="Записать прошивку"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/bReadParams"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Считать параметры"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/bEditParams"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="OnClickEditParams"
+                android:text="Изменить параметры"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/bSendParams"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Записать параметры"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/bFinish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ОТМЕНА"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+

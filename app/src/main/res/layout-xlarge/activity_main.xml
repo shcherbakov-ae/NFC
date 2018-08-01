@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.nfc_tpi.Activity.MainActivity">
+<ScrollView
+    android:id="@+id/scrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_x="0px"
+    android:layout_y="0px"
+    android:scrollbars="vertical"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_above="@+id/bSendFirmare">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bSendParams"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Данные отсутствуют..."
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+</ScrollView>
+    <Button
+        android:id="@+id/bSendFirmare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onMyClick"
+        android:text="Записать прошивку"
+        android:textSize="8sp"
+        android:layout_above="@+id/bReadParams"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/bEditParams"
+        android:layout_toStartOf="@+id/bEditParams"/>
+
+    <Button
+        android:text="Записать параметры"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bSendParams"
+        android:textSize="8sp"
+        android:layout_above="@+id/bFinish"
+        android:layout_toEndOf="@+id/bEditParams"
+        />
+
+    <Button
+        android:text="ОЧИСТИТЬ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bFinish"
+        android:textSize="8sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/bEditParams"
+        android:layout_toEndOf="@+id/bEditParams"/>
+
+    <Button
+        android:text="Считать параметры"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bReadParams"
+        android:textSize="8sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/bEditParams"
+        android:layout_toStartOf="@+id/bEditParams"/>
+
+    <Button
+        android:id="@+id/bEditParams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Изменить параметры"
+        android:textSize="8sp"
+        android:layout_below="@+id/scrollView"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
+
